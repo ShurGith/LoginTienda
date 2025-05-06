@@ -5,7 +5,6 @@ import { Icon } from "@iconify/react/dist/iconify.js"
 
 function ModalCarrito() {
     const { carrito, quitarCarrito } = useContext(CarritoContext)
-    //console.log(carrito)
     return (
         <div className=" group-hover:flex absolute top-10 right-10 flex-col gap-2 bg-white py-4 px-2 rounded-xl z-12 min-w-fit">
             {carrito && carrito.map((item) => (

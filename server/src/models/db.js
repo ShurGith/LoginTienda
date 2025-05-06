@@ -3,7 +3,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'fila',
+    database: 'larareact',
     port: 33006,
     waitForConnections: true,
     connectionLimit: 10,

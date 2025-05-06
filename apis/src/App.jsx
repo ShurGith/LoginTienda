@@ -12,8 +12,8 @@ import { CarritoProvider } from './context/carrito.jsx'
 */
 
 import { Blog, Home, Paises, Carrito, Contacto, Nosotros, Productos, 
-        Producto, Navbar, Footer, Pagar, Page404, Login } from './data/Importers.jsx'
-import { FiltersProvider, CarritoProvider } from './data/Importers.jsx'
+        Producto, Navbar, Footer, Pagar, Page404, Login, Logout } from './data/Importers.jsx'
+import { FiltersProvider, CarritoProvider, LogueadoProvider } from './data/Importers.jsx'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
@@ -22,6 +22,7 @@ function App() {
   return (
     <FiltersProvider>
       <BrowserRouter>
+        <LogueadoProvider>
         <CarritoProvider>
           <Navbar />
           <div className="w-full my-10 mx-auto max-w-[1640px]">
@@ -34,6 +35,8 @@ function App() {
               <Route path="/carrito" element={<Carrito />} />
               <Route path="/pagar" element={<Pagar />} />
              <Route path="/login" element={<Login />} />
+             <Route path="/registro" element={<Login />} />
+             <Route path="/logout" element={<Logout />} />
               <Route path="/productos" element={<Productos />} />
               <Route path="/productos/:id" element={<Producto />} />
               <Route path="*" element={<Page404 />} />
@@ -41,6 +44,7 @@ function App() {
           </div>
           <Footer />
         </CarritoProvider>
+        </LogueadoProvider>
       </BrowserRouter>
     </FiltersProvider>
 

@@ -33,7 +33,17 @@ const Enlaces = [
         id: 7,
         nombre: "Login",
         url: "/login",
-    }
+    },
+    {
+        id: 8,
+        nombre: "Registro",
+        url: "/registro",
+    },
+    {
+        id: 9,
+        nombre: "Logout",
+        url: "/logout",
+    },
 ]
 
 export default Enlaces;

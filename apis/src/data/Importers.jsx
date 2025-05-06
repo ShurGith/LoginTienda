@@ -26,4 +26,6 @@ export { default as Navbar } from '../components/Navbar.jsx'
 export { default as Footer } from '../components/Footer.jsx'
 export { FiltersProvider } from '../context/filters.jsx'
 export { CarritoProvider } from '../context/carrito.jsx'
+export { LogueadoProvider } from '../context/logueado.jsx'
+export { default as Logout } from '../login/Logout.jsx'
 

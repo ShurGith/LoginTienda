@@ -3,11 +3,10 @@ const connection = require('../models/db');
 
 module.exports.ping = (req, res) => {
 
-    const query = 'SELECT * FROM users';
+    const consult = 'SELECT * FROM users WHERE id = 1';
     try {
-        connection.query(query, (err, results) => {
-            if (err) throw err;
-            res.send(results);
+        connection.query(consult, (err, results) => {
+          console.log(results);
         });
     } catch (error) {
         console.log(error);
