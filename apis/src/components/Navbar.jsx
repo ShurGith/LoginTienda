@@ -16,8 +16,7 @@ function Navbar() {
 
             <h1 className='text-2xl font-bold'>Ecommerce</h1>
             {isLoggedIn ? <h2 className='text-2xl font-bold'>Bienvenido {isLoggedIn.name}</h2> : null}
-
-           {countCarrito > 0 &&  <ModalCarrito />}
+             
             <ul className='flex justify-center gap-4'>
                 {Enlaces.map((enlace) => (
                     (enlace.nombre === "Login" || enlace.nombre === "Registro") && isLoggedIn ? "" :
@@ -29,15 +28,17 @@ function Navbar() {
                             </NavLink>
                 ))}
             </ul>
-            <div className='group'>
                 {countCarrito > 0 &&
+            <div className='group'>
+                 <ModalCarrito />
                     <NavLink to={'/carrito'} className='relative'>
                         <Icon icon="solar:cart-large-broken" width="40" height="40" color="white" />
                         <output className='absolute -top-2 -right-2 bg-black text-white w-6 h-6 rounded-full flex justify-center items-center'>
                             {countCarrito}
                         </output>
-                    </NavLink>}
+                    </NavLink>
             </div>
+                }
 
         </nav>
     )
